@@ -5,7 +5,7 @@
 ```
 Students can signup using gsuite mail only.
 ```
-![Student Signup](https://github.com/Faizun-Faria/StudentFacultyAlumniCollaboration/files/5189580/Student_Signup.zip)
+![Student Signup](https://user-images.githubusercontent.com/34593750/92506063-b524fa80-f226-11ea-82b7-dccacb828184.gif)
 -----------------------------------
 
 
