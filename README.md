@@ -2,9 +2,9 @@
 
 -----------------------------------
 **Student Signup**
-``
+```
 Students can signup using gsuite mail only.
-``
+```
 ![Student Signup]()
 -----------------------------------
 
