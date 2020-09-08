@@ -14,7 +14,7 @@ Students can signup using gsuite mail only.
 ``
 Alumni can signup using any mail.
 ``
-![Alumni Signup]()
+![Alumni Signup](https://user-images.githubusercontent.com/34593750/92507081-40eb5680-f228-11ea-896e-2f8bc1503034.gif)
 -----------------------------------
 
 
@@ -23,7 +23,7 @@ Alumni can signup using any mail.
 ``
 Any mail address can not be used more than once.
 ``
-![Duplicate Email_Signup]()
+![Duplicate Email_Signup](https://user-images.githubusercontent.com/34593750/92507156-5bbdcb00-f228-11ea-93f0-81136ed6710a.gif)
 -----------------------------------
 
 
