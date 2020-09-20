@@ -225,6 +225,7 @@ public class DatabaseQuery {
     
     
     public void getPosts(String userType) throws SQLException{
+        conn();
         query = "SELECT * FROM POST";
         stm = connection.createStatement();
         res = stm.executeQuery(query);

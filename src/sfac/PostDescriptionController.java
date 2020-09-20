@@ -1,13 +1,7 @@
 package sfac;
 
 import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -64,7 +58,7 @@ public class PostDescriptionController {
         alert.showAndWait();
     }
 
-    private boolean checkOrganizationName(String orgName) {
+    public boolean checkOrganizationName(String orgName) {
         if (orgName.isEmpty()) {
             showError("Enter organization name");
             return true;
@@ -72,7 +66,7 @@ public class PostDescriptionController {
         return false;
     }
 
-    private boolean checkPosition(String pos) {
+    public boolean checkPosition(String pos) {
         if (pos.isEmpty()) {
             showError("Enter position");
             return true;
@@ -80,7 +74,7 @@ public class PostDescriptionController {
         return false;
     }
 
-    private boolean checkDescription(String des) {
+    public boolean checkDescription(String des) {
         if (des.isEmpty()) {
             showError("Enter description");
             return true;

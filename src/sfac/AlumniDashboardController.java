@@ -3,7 +3,6 @@ package sfac;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -45,10 +44,6 @@ public class AlumniDashboardController implements Initializable {
     
     DatabaseQuery dq;
     UserSession us;
-    Stack<String> stack = new Stack<String>();
-    Statement statement;
-    ResultSet rs;
-    PreparedStatement ps;
     int res;
     ArrayList <Button> blist;
 

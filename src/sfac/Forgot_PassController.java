@@ -20,8 +20,6 @@ import javafx.stage.Stage;
  * @author Faizun
  */
 public class Forgot_PassController{
-    Statement statement;
-    Connection connection;
     Encoding ed;
     DatabaseQuery dq;
     

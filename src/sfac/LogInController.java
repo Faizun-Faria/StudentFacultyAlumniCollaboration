@@ -125,26 +125,6 @@ public class LogInController {
         alert.setContentText(err);
         alert.showAndWait();
     }
-    
-    
-    
-    
-    private static int sessionID = 0;
-    
-    public static int getSessionID() {
-        return sessionID;
-    }
-    
-    public static void setSessionID(int sessionid) {
-        sessionID = sessionid;
-    }
-    
-    private int generateSessionID() {
-        sessionID++;
-        return sessionID;
-    }
-
-
 
 } 
 

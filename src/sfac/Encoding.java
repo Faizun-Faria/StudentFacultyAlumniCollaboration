@@ -11,7 +11,6 @@ package sfac;
  */
 import java.security.MessageDigest;
 import sun.misc.BASE64Encoder;
-import java.util.Base64;
 
 public class  Encoding  {
     public static synchronized String encrypt(String pass) throws Exception {
@@ -20,7 +19,6 @@ public class  Encoding  {
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(pass.getBytes("UTF-8"));
             byte bt[] = md.digest();
-            
             hashValue = (new BASE64Encoder()).encode(bt);
         } catch(Exception e) {
             System.out.println("Something went wrong. Change your password.");

@@ -1,6 +1,6 @@
 package sfac;
 
-import java.sql.Connection;
+
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,9 +22,8 @@ public class SignUpController{
     /**
      * Initializes the controller class.
      */
-    Connection connection;
-    String First_Name, Last_Name, Email_ID, Password, Confirm_Password, userType="";
-    DatabaseQuery dq = new DatabaseQuery();
+    String First_Name="", Last_Name="", Email_ID="", Password="", Confirm_Password="", userType="";
+    DatabaseQuery dq;
     
     @FXML
     private Label signup;
@@ -61,6 +60,7 @@ public class SignUpController{
         if(checkInfo()){
             return;
         }  
+        dq = new DatabaseQuery();
         int r = dq.insertUserInfo(Email_ID, First_Name, Last_Name, Password, userType);
         if (r != 0) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -114,9 +114,9 @@ public class SignUpController{
         Confirm_Password = cPassword.getText();
         
         if(checkType()) return true;  
-        
         if(checkFirstName(First_Name)) return true;  
         if(checkLastName(Last_Name)) return true;  
+        dq = new DatabaseQuery();
         if (dq.checkEmailForSignup(Email_ID, userType))  return true;  
         if (checkPassword(Password))  return true;  
         if (checkConfirmPassword(Confirm_Password))  return true;  
@@ -126,7 +126,7 @@ public class SignUpController{
     /*
     It checks whether any of the radio button is selected or not.
     */
-    private boolean checkType() {
+    public boolean checkType() {
         if(userType.equals("")){
             showError("Choose type");
             return true;
@@ -137,7 +137,7 @@ public class SignUpController{
     /*
     It checks if there is any valid value given as input.
     */
-    private boolean checkFirstName(String First_Name) {
+    public boolean checkFirstName(String First_Name) {
         if(First_Name.isEmpty()){
             showError("Enter your first name");
             return true;
@@ -148,7 +148,7 @@ public class SignUpController{
     /*
     It checks if there is any valid value given as input.
     */
-    private boolean checkLastName(String Last_Name) {
+    public boolean checkLastName(String Last_Name) {
         if(Last_Name.isEmpty()){
             showError("Enter your last name");
             return true;
@@ -161,7 +161,7 @@ public class SignUpController{
     This method will check if the user input contains value or it is empty.
     It also checks whether the password fulfills the conditions.
     */
-    private boolean checkPassword(String Password) {
+    public boolean checkPassword(String Password) {
         CheckRegex checkReg = new CheckRegex();
         if (Password.isEmpty()) {
             showError("Enter your password");
@@ -177,7 +177,7 @@ public class SignUpController{
     This method will check if the user input contains value or it is empty.
     Then it checks whether it matches with the password.
     */
-    private boolean checkConfirmPassword(String Confirm_Password){
+    public boolean checkConfirmPassword(String Confirm_Password){
         
         if (Confirm_Password.isEmpty()) {
             showError("Enter your confirm password");
